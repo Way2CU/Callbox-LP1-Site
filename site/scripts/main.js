@@ -69,6 +69,10 @@ Site.on_load = function() {
 		.controls.set_pause_on_hover(false)
 		.controls.set_auto(1200);
 	 Site.client_logo_slider.images.update()	
+
+	 if(Site.is_mobile()) {
+	 	Site.client_logo_slider.images.set_visible_count(2);
+	 }
 };
 
 

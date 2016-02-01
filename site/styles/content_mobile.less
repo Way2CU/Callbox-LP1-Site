@@ -1,5 +1,5 @@
 /**
- * Main Style Sheet
+ * Main Mobile Style Sheet
  * Callbox
  *
  * Copyright (c) 2015. by Way2CU, http://way2cu.com
@@ -8,7 +8,7 @@
 
 header {
 	display: block;
-	padding: 20px calc(~'(100% - 1200px) / 2');
+	text-align: center;
 	position: relative;
 	height: 500px;
 }
@@ -27,40 +27,42 @@ header.version {
 	min-height: 660px;
 }
 
-header:before {
-	content: "";
-	display: inline-block;
-	vertical-align: middle;
-	height: 100%;
-}
-
 header article {
-	display: inline-block;
-	vertical-align: middle;
-	width: 400px;
+	display: block;
+	padding-top: 10px;
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
+	
 }
 
 header article img {
-	width: 75%;
+	width: 50%;
 }
 
 header article h1 {
-	font-size: 2.5em;
+	margin: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 1.5em;
 	font-weight: 900;
 }
 
 header.version article h1 {
 	color: @color_ac_black;
-	font-size: 3em;
+	font-size: 1.5em;
 }
 
 header article p {
+	margin: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	font-weight: 700;
-	font-size: 1.3em;
+	font-size: 1em;
 }
 
 header.version article p {
-	font-size: 1.6em;
+	font-size: 1em;
 }
 
 header article ul {
@@ -71,7 +73,8 @@ header article ul {
 }
 
 header article ul  li {
-	padding-bottom: 10px;
+	text-align: right;
+	padding-bottom: 5px;
 }
 
 header article ul  li:last-of-type {
@@ -83,7 +86,7 @@ header figure {
 	top: 0px;
 	left: 0px;
 	width: 100%;
-	height: 540px;
+	height: 500px;
 	opacity: 0;
 	visibility: hidden;
 	z-index: -1;
@@ -92,7 +95,7 @@ header figure {
 	margin: 0px;
 	background-repeat: no-repeat;
 	background-position: center top;
-	background-size: auto 100%;
+	background-size: 100% auto;
 }
 
 header figure.visible {
@@ -101,62 +104,55 @@ header figure.visible {
 }
 
 section#clients {
- 	display: block;
- 	padding-top: 20px;
- 	padding-bottom: 20px;
- 	text-align: center;
- }
+	display: block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+}
 
- section#clients div.images_container {
- 	display: block;
- 	margin-left: auto;
- 	margin-right: auto;
- 	min-height: 135px;
- 	position: relative;
- 	overflow: hidden;
- 	width: 95%;
- }
+section#clients div.images_container {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	min-height: 100px;
+	position: relative;
+	overflow: hidden;
+	width: 95%;
+}
 
- section#clients div.images_container img {
- 	position: absolute;
- 	top: 50%;
- 	margin-top: -42.5px;
- 	width: 120px;
- 	opacity: 0;
- 	transition: all 0.6s;
- }
+section#clients div.images_container img {
+	position: absolute;
+	top: 50%;
+	margin-top: -42.5px;
+	width: 120px;
+	opacity: 0;
+	transition: all 0.6s;
+}
 
- section#clients div.images_container img.visible {
- 	opacity: 1;
- }
+section#clients div.images_container img.visible {
+	opacity: 1;
+}
 
- section#clients div.images_container img.transit {
- 	transition: none;
- }
+section#clients div.images_container img.transit {
+	transition: none;
+}
 
 section#contact {
  	display: block;
+ 	padding-top: 10px;
+ 	padding-bottom: 10px;
  	text-align: center;
- 	padding:30px calc(~'(100vw - 1200px) ' / 2);
  	background-color: @color_ac_blue;
-}
-
-header.version section#contact {
-	position: absolute;
-	top: 50%;
-	margin-top: -194px;
-	left: calc(~'(50% - 600px)');
-	width: 400px;
-	padding: 0px;
-	padding-top: 20px;
-	padding-bottom: 20px;
 }
 
 section#contact p {
 	margin: 0px;
+	margin-left: auto;
+	margin-right: auto;
 	padding-bottom: 10px;
-	font-size: 1.6em;
+	font-size: 1.3em;
 	font-weight: 400;
+	width: 95%;
 }
 
 header.version section#contact p {
@@ -169,17 +165,12 @@ section#contact form {
 }
 
 section#contact form label {
-	display: inline-block;
-	vertical-align: top;
-}
-
-header.version section#contact form label {
 	display: block;
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 	position: relative;
 }
 
-header.version section#contact form label:before {
+section#contact form label:before {
 	content: "";
 	position: absolute;
 	right: 15px;
@@ -192,26 +183,19 @@ header.version section#contact form label:before {
 	height: 32px;
 }
 
-header.version section#contact form label:nth-of-type(1):before {
+section#contact form label:nth-of-type(1):before {
 	background-position: 0px 0px;
 }
 
-header.version section#contact form label:nth-of-type(2):before {
+section#contact form label:nth-of-type(2):before {
 	background-position: -32px 0px;
 }
 
-header.version section#contact form label:nth-of-type(3):before {
+section#contact form label:nth-of-type(3):before {
 	background-position: -62px 0px;
 }
 
 section#contact form label span {
-	display: inline-block;
-	vertical-align: middle;
-	padding-left: 10px;
-	padding-right: 10px;
-}
-
-header.version section#contact form label span {
 	display: block;
 	padding-right: 50px;
 	padding-bottom: 5px;
@@ -223,21 +207,12 @@ section#contact form label input {
 	display: inline-block;
 	vertical-align: middle;
 	padding-right: 5px;
-	padding-top: 8px;
-	padding-bottom: 8px;
-	border: 1px solid @color_text;
-	background-color: fade(@color_text,50%);
-	width: calc(~'220px - 5px');
-	transition: all 0.3s;
-}
-
-header.version section#contact form label input {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
 	padding-top: 12px;
 	padding-bottom: 12px;
-	width: calc(~'90% - 5px');
+	border: 1px solid @color_text;
+	background-color: fade(@color_text,50%);
+	width: calc(~'95% - 5px');
+	transition: all 0.3s;
 }
 
 section#contact form label input:hover {
@@ -257,8 +232,8 @@ section#contact form div.controls {
 
 section#contact form div.controls button {
 	display: inline-block;
-	padding-top: 8px;
-	padding-bottom: 8px;
+	padding-top: 12px;
+	padding-bottom: 12px;
 	padding-left: 70px;
 	padding-right: 70px;
 	border: none;
@@ -291,4 +266,3 @@ footer div.copyright {
 footer div.copyright a {
 	color: white;
 }
-
