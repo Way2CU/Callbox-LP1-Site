@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../units/schema/language.dtd">
+<document>
+	<cms:var name="_DOCTYPE"/>
+	<html lang="$language" cms:eval="lang">
+		<head>
+			<title><cms:text constant="site_title"/></title>
+			<cms:collection include="page_control"/>
+			<cms:module name="head_tag" action="print_tag"/>
+		</head>
+
+		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
+			<header class="version">
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="about_callbox"
+					template="parts/article_version.xml"
+					/>
+
+				<section id="contact">
+					<p><cms:text constant="title_form"/></p>
+					<cms:module
+						name="contact_form"
+						action="show"
+						text_id="contact"
+						/>
+				</section>	
+
+			</header>
+
+			<section id="clients">
+
+				<div class="images_container">
+					<cms:module
+						name="gallery"
+						action="show_image_list"
+						group="clients"
+						template="parts/client_images.xml"
+						/>
+				</div>	
+
+			</section>
+
+			<footer>
+				<div>
+					<cms:template file="stock/copyright.xml">
+						<param name="holder" value="copyright_holder"/>
+						<param name="text" value="copyright_text"/>
+						<param name="light" value=""/>
+					</cms:template>
+				</div>
+			</footer>
+		</body>
+	</html>
+</document>
