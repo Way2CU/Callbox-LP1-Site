@@ -56,7 +56,19 @@ Site.on_load = function() {
 	Site.images_slider = new PageControl('header', 'figure');
 	Site.images_slider
 		.setInterval(4000)
-		.setWrapAround(true)
+		.setWrapAround(true);
+
+	// create slider for client logo gallery
+	 Site.client_logo_slider = new Caracal.Gallery.Slider();
+	 Site.client_logo_slider
+		.images.set_container('div.images_container')
+		.images.set_visible_count(15)
+		.images.set_step_size(1)
+		.images.set_spacing(20)
+		.images.add('div.images_container img')
+		.controls.set_pause_on_hover(false)
+		.controls.set_auto(800);
+	 Site.client_logo_slider.images.update()	
 };
 
 

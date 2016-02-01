@@ -1,0 +1,205 @@
+/**
+ * Main Style Sheet
+ * Callbox
+ *
+ * Copyright (c) 2015. by Way2CU, http://way2cu.com
+ * Authors:Tal Reznic
+ */
+
+ header {
+ 	display: block;
+ 	padding: 20px calc(~'(100% - 1200px) / 2');
+ 	position: relative;
+ 	height: 500px;
+ }
+
+ header:before {
+ 	content: "";
+ 	display: inline-block;
+ 	vertical-align: middle;
+ 	height: 100%;
+ }
+
+
+ header article {
+ 	display: inline-block;
+ 	vertical-align: middle;
+ 	width: 400px;
+ }
+
+ header article img {
+ 	width: 75%;
+ }
+
+ header article h1 {
+ 	font-size: 2.5em;
+ 	font-weight: 900;
+ }
+
+ header article p {
+ 	font-weight: 700;
+ 	font-size: 1.3em;
+ }
+
+ header article ul {
+ 	margin: 0px;
+ 	padding: 0px;
+ 	padding-right: 20px;
+ 	font-weight: 700;
+ }
+
+ header article ul  li {
+ 	padding-bottom: 10px;
+ }
+
+ header article ul  li:last-of-type {
+ 	padding-bottom: 0px;
+ }
+
+  header figure {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 100%;
+  	height: 540px;
+  	opacity: 0;
+  	visibility: hidden;
+  	z-index: -1;
+  	transition: all 0.8s;
+
+  	margin: 0px;
+  	background-repeat: no-repeat;
+  	background-position: center top;
+  	background-size: auto 100%;
+  }
+
+  header figure.visible {
+  	opacity: 1;
+  	visibility: visible;
+  }
+
+ section#clients {
+ 	display: block;
+ 	padding-top: 20px;
+ 	padding-bottom: 20px;
+ 	text-align: center;
+ }
+
+ section#clients div.images_container {
+ 	display: block;
+ 	min-height: 135px;
+ 	position: relative;
+ 	overflow: hidden;
+ }
+
+ section#clients div.images_container img {
+ 	position: absolute;
+ 	top: 50%;
+ 	margin-top: -50px;
+ 	width: 140px;
+ 	opacity: 0;
+ 	transition: all 0.3s;
+ }
+
+ section#clients div.images_container img.visible {
+ 	opacity: 1;
+ }
+
+ section#clients div.images_container img.transit {
+ 	transition: none;
+ }
+
+section#contact {
+ 	display: block;
+ 	text-align: center;
+ 	padding:30px calc(~'(100vw - 1200px) ' / 2);
+ 	background-color: @color_ac_blue;
+}
+
+section#contact p {
+	margin: 0px;
+	padding-bottom: 10px;
+	font-size: 1.6em;
+	font-weight: 400;
+}
+
+section#contact form {
+	display: block;
+}
+
+section#contact form label {
+	display: inline-block;
+	vertical-align: top;
+}
+
+section#contact form label span {
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+section#contact form label input {
+	display: inline-block;
+	vertical-align: middle;
+	padding-right: 5px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	border: 1px solid @color_text;
+	background-color: fade(@color_text,50%);
+	width: calc(~'220px - 5px');
+	transition: all 0.3s;
+}
+
+section#contact form label input:hover {
+	background-color: fade(@color_text,80%);
+}
+
+section#contact form label input:focus {
+	background-color: @color_text;
+}
+
+section#contact form div.controls {
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+section#contact form div.controls button {
+	display: inline-block;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 70px;
+	padding-right: 70px;
+	border: none;
+	border: 1px solid @color_text;
+	background-color: @color_button;
+	font-weight: 700;
+	color: @color_text;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+section#contact form div.controls button:hover {
+	background-color: darken(@color_button,5%);
+}
+
+footer > div {
+	padding: 0px calc(~'(100% - 1200px) / 2');
+	background-color: black;
+	text-align: center;
+}
+
+/**
+ * Copyright
+ */
+footer div.copyright {
+	display: inline-block;
+	color: @color_text;
+}
+
+footer div.copyright a {
+	color: white;
+}
+

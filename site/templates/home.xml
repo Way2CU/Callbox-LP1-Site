@@ -37,6 +37,38 @@
 				</cms:mobile>
 
 			</header>
+
+			<section id="clients">
+
+				<div class="images_container">
+					<cms:module
+						name="gallery"
+						action="show_image_list"
+						group="clients"
+						template="parts/client_images.xml"
+						/>
+				</div>	
+
+			</section>
+
+			<section id="contact">
+				<p><cms:text constant="title_form"/></p>
+				<cms:module
+					name="contact_form"
+					action="show"
+					text_id="contact"
+					/>
+			</section>
+
+			<footer>
+				<div>
+					<cms:template file="stock/copyright.xml">
+						<param name="holder" value="copyright_holder"/>
+						<param name="text" value="copyright_text"/>
+						<param name="light" value=""/>
+					</cms:template>
+				</div>
+			</footer>
 		</body>
 	</html>
 </document>
