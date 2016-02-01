@@ -1,0 +1,79 @@
+/**
+ * Header Style Sheet
+ * callbox
+ *
+ * Copyright (c) 2015. by Way2CU, http://way2cu.com
+ * Authors:Tal Reznic
+ */
+
+header {
+	display: block;
+	padding: 20px calc(~'(100% - 1200px) / 2');
+	position: relative;
+	height: 500px;
+}
+
+header:before {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+}
+
+
+header article {
+	display: inline-block;
+	vertical-align: middle;
+	width: 400px;
+}
+
+header article img {
+	width: 75%;
+}
+
+header article h1 {
+	font-size: 2.5em;
+	font-weight: 900;
+}
+
+header article p {
+	font-weight: 700;
+	font-size: 1.3em;
+}
+
+header article ul {
+	margin: 0px;
+	padding: 0px;
+	padding-right: 20px;
+	font-weight: 700;
+}
+
+header article ul  li {
+	padding-bottom: 10px;
+}
+
+header article ul  li:last-of-type {
+	padding-bottom: 0px;
+}
+
+ header figure {
+ 	position: absolute;
+ 	top: 0px;
+ 	left: 0px;
+ 	width: 100%;
+ 	height: 540px;
+ 	opacity: 0;
+ 	visibility: hidden;
+ 	z-index: -1;
+ 	transition: all 0.8s;
+
+ 	margin: 0px;
+ 	background-repeat: no-repeat;
+ 	background-position: center top;
+ 	background-size: auto 100%;
+ }
+
+ header figure.visible {
+ 	opacity: 1;
+ 	visibility: visible;
+ }

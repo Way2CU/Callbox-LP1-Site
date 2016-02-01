@@ -1,0 +1,7 @@
+<document>
+	<article>
+		<img src="_BASEURL.'/site/images/logo-white.svg'"  alt="logo" cms:eval="src"/>
+		<h1><cms:var param="title" multilanguage="yes"/></h1>
+		<cms:markdown param="content" multilanguage="yes"/>
+	</article>
+</document>
