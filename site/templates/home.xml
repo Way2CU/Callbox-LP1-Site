@@ -27,38 +27,55 @@
 						/>
 				</cms:desktop>
 
-				<cms:mobile>
-					<cms:module
-						name="gallery"
-						action="show_image_list"
-						group="mobile_header_slider"
-						template="parts/slider_images.xml"
-						/>
-				</cms:mobile>
-
 			</header>
+			<cms:desktop>
+				<section id="clients">
 
-			<section id="clients">
+					<div class="images_container">
+						<cms:module
+							name="gallery"
+							action="show_image_list"
+							group="clients"
+							template="parts/client_images.xml"
+							/>
+					</div>	
 
-				<div class="images_container">
+				</section>
+
+				<section id="contact">
+					<p><cms:text constant="title_form"/></p>
 					<cms:module
-						name="gallery"
-						action="show_image_list"
-						group="clients"
-						template="parts/client_images.xml"
+						name="contact_form"
+						action="show"
+						text_id="contact"
 						/>
-				</div>	
+				</section>
+			</cms:desktop>
 
-			</section>
+			<cms:mobile>
+				<section id="contact">
+					<p><cms:text constant="title_form"/></p>
+					<cms:module
+						name="contact_form"
+						action="show"
+						text_id="contact"
+						/>
+				</section>
+				
+				<section id="clients">
 
-			<section id="contact">
-				<p><cms:text constant="title_form"/></p>
-				<cms:module
-					name="contact_form"
-					action="show"
-					text_id="contact"
-					/>
-			</section>
+					<div class="images_container">
+						<cms:module
+							name="gallery"
+							action="show_image_list"
+							group="clients"
+							template="parts/client_images.xml"
+							/>
+					</div>	
+
+				</section>
+
+			</cms:mobile>
 
 			<footer>
 				<div>

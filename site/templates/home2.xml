@@ -10,6 +10,7 @@
 		</head>
 
 		<body class="$language_rtl ? 'rtl' : 'ltr'" cms:eval="class">
+
 			<header class="version">
 				<cms:module
 					name="articles"
@@ -17,7 +18,20 @@
 					text_id="about_callbox"
 					template="parts/article_version.xml"
 					/>
+				<cms:desktop>
+					<section id="contact">
+						<p><cms:text constant="title_form"/></p>
+						<cms:module
+							name="contact_form"
+							action="show"
+							text_id="contact"
+							/>
+					</section>
+				</cms:desktop>		
 
+			</header>
+
+			<cms:mobile>
 				<section id="contact">
 					<p><cms:text constant="title_form"/></p>
 					<cms:module
@@ -25,10 +39,9 @@
 						action="show"
 						text_id="contact"
 						/>
-				</section>	
-
-			</header>
-
+				</section>
+			</cms:mobile>
+			
 			<section id="clients">
 
 				<div class="images_container">
