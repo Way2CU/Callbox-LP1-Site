@@ -15,6 +15,7 @@ header {
 
 header.version {
 	display: block;
+	text-align: right;
 	padding: 20px calc(~'(100% - 1200px) / 2');
 	position: relative;
 	height: 500px;
@@ -44,6 +45,13 @@ body.ltr header article {
 	display: inline-block;
 	vertical-align: middle;
 	width: 500px;
+}
+
+body.ltr header.version article {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: left;
+	width: 400px;
 }
 
 header article img {
@@ -130,6 +138,12 @@ section#clients {
  	text-align: center;
  }
 
+ section#clients h2 {
+ 	text-align: center;
+ 	color: @color_ac_blue;
+ 	font-weight: 700;
+ }
+
  section#clients div.images_container {
  	display: block;
  	margin-left: auto;
@@ -178,6 +192,8 @@ header.version section#contact {
 section#contact p {
 	margin: 0px;
 	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
 	font-size: 1.6em;
 	font-weight: 400;
 }
