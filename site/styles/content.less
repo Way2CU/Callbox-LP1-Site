@@ -40,8 +40,18 @@ header article {
 	width: 400px;
 }
 
+body.ltr header article {
+	display: inline-block;
+	vertical-align: middle;
+	width: 500px;
+}
+
 header article img {
 	width: 75%;
+}
+
+body.ltr header article img {
+	width: 50%;
 }
 
 header article h1 {
@@ -70,6 +80,11 @@ header article ul {
 	font-weight: 700;
 }
 
+body.ltr header article ul {
+	padding-right: 0px;
+	padding-left: 20px;
+}
+
 header article ul  li {
 	padding-bottom: 10px;
 }
@@ -93,6 +108,14 @@ header figure {
 	background-repeat: no-repeat;
 	background-position: center top;
 	background-size: auto 100%;
+}
+
+body.ltr header figure {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+	transform: rotateY(180deg);
 }
 
 header figure.visible {
