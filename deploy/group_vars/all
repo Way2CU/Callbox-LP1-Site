@@ -3,7 +3,7 @@ site:
   domain: callbox.co.il
   subdomain: lp
   make_alias: false
-  root: httpdocs
+  root: lp
   username: callbox
   caracal_branch: develop
   ip_address: 74.208.230.207
