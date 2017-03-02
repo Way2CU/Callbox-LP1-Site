@@ -3,5 +3,18 @@
 		<img src="_BASEURL.'/site/images/logo-white.svg'"  alt="logo" cms:eval="src"/>
 		<h1><cms:var param="title" multilanguage="yes"/></h1>
 		<cms:markdown param="content" multilanguage="yes"/>
+
+		<div class="contact_us">
+			<h4><cms:text constant="call" /></h4>
+			<a href="'tel:'.urlencode(Language::get_Text('phone'))"
+				cms:eval="href"
+				>
+				<!-- Phone text -->
+				<cms:text constant="phone"/>
+				<!-- icon-phone -->
+				<cms:svg file="phone.svg"/>
+			</a>
+		</div>
+
 	</article>
 </document>
