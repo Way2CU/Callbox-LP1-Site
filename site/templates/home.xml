@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE document SYSTEM "../units/schema/language.dtd">
 <document>
-	<cms:var name="_DOCTYPE"/>
-	<html lang="$language" cms:eval="lang">
+	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
 		<head>
 			<title><cms:text constant="site_title"/></title>
 			<cms:collection include="page_control"/>
@@ -29,6 +28,15 @@
 
 			</header>
 			<cms:desktop>
+				<section id="contact">
+					<p><cms:text constant="title_form"/></p>
+					<cms:module
+						name="contact_form"
+						action="show"
+						text_id="contact"
+						/>
+				</section>
+
 				<section id="clients">
 					<h2><cms:text constant="title_clients"/></h2>
 					<div class="images_container">
@@ -38,17 +46,7 @@
 							group="clients"
 							template="parts/client_images.xml"
 							/>
-					</div>	
-
-				</section>
-
-				<section id="contact">
-					<p><cms:text constant="title_form"/></p>
-					<cms:module
-						name="contact_form"
-						action="show"
-						text_id="contact"
-						/>
+					</div>
 				</section>
 			</cms:desktop>
 
@@ -61,7 +59,7 @@
 						text_id="contact"
 						/>
 				</section>
-				
+
 				<section id="clients">
 
 					<div class="images_container">
@@ -71,7 +69,7 @@
 							group="clients"
 							template="parts/client_images.xml"
 							/>
-					</div>	
+					</div>
 
 				</section>
 
