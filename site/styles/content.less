@@ -38,7 +38,7 @@ header:before {
 header article {
 	display: inline-block;
 	vertical-align: middle;
-	width: 400px;
+	width: 500px;
 }
 
 body.ltr header article {
@@ -55,7 +55,7 @@ body.ltr header.version article {
 }
 
 header article img {
-	width: 75%;
+	width: 15em;
 }
 
 body.ltr header article img {
@@ -63,8 +63,12 @@ body.ltr header article img {
 }
 
 header article h1 {
-	font-size: 2.5em;
+	font-size: 3em;
 	font-weight: 900;
+	margin: 0em;
+	padding-bottom: 0.5em;
+	margin-top: 0.5em;
+	line-height: 100%;
 }
 
 header.version article h1 {
@@ -116,6 +120,56 @@ header figure {
 	background-repeat: no-repeat;
 	background-position: center top;
 	background-size: auto 100%;
+}
+
+header div.contact_us {
+	padding-top: 1em;
+}
+
+header div.contact_us h4 {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0;
+	font-size: 2em;
+	padding-right: 1em;
+}
+
+html[dir=rtl] header div.contact_us h4 {
+	padding-left: 1em;
+	padding-right: 0;
+}
+
+header div.contact_us a {
+	display: inline-block;
+	vertical-align: middle;
+	text-decoration: none;
+	color: white;
+	background-color: lighten(@color_ac_blue, 10%);
+	border: 1px solid white;
+	border-radius: 10px;
+	font-weight: 700;
+	font-size: 1.5em;
+	padding: 0.5em 1em;
+	transition: background-color 0.3s;
+
+	&:hover {
+		background-color: lighten(@color_ac_blue, 30%)
+	}
+
+}
+
+header div.contact_us a svg {
+	width: 1.5em;
+	height: 1.5em;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 0.5em;
+
+	transform: scaleX(-1);
+}
+
+html[dir=rtl] header div.contact_us a svg {
+	margin-right: 0.5em;
 }
 
 body.ltr header figure {
